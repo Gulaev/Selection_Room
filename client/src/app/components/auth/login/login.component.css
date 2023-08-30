@@ -1,9 +1,60 @@
+/*.form-container {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*}*/
+
+/*.image-container {*/
+/*  !*width: 320px; !* Image width will be 100% of its container *!*!*/
+/*  !*height: 420px; !* Maintain aspect ratio *!*!*/
+/*  max-height: 100%;*/
+/*  flex: 1;*/
+/*  padding: 1rem;*/
+/*  left-*/
+/*}*/
+
 .center-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 30vh; /* Чтобы содержимое занимало всю высоту экрана */
+  height: 40vh;
+}
+
+.table-container {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.table-row {
+  display: table-row;
+}
+
+.image-container {
+  display: table-cell;
+  vertical-align: middle; /* Align the image container to the bottom */
+  padding: 1rem;
+
+}
+
+.form-container {
+  display: table-cell;
+  padding: 1rem;
+  vertical-align: middle;
+  width: 50%; /* To make the form take half the available width */
+}
+
+
+
+/*.form {*/
+/*  flex: 2;*/
+/*  padding: 1rem;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  justify-content: center;*/
+/*}*/
+.my-font {
+  font-family: 'MyFont';
 }
 
 /*.center-content {*/

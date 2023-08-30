@@ -10,7 +10,6 @@ import {UserService} from "../../../service/user.service";
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent {
-  isLoginPage: boolean = false;
   isUserLogin: boolean = false;
   user!: User
 
@@ -28,9 +27,6 @@ export class NavigationComponent {
       });
 
     }
-    // this.route.url.subscribe(urlSegments => {
-    //   this.isLoginPage = urlSegments[0].path === 'login';
-    // });
   }
 
   clickLogin() {

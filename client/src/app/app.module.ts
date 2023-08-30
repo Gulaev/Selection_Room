@@ -24,6 +24,7 @@ import {TreeModule} from "smart-webcomponents-angular/tree";
 import {CalendarComponent} from "./components/scheduling/scheduling.component";
 import {SmartWebComponentModule} from "./modules/smart-web-component.module";
 import {DayPilotModule} from "@daypilot/daypilot-lite-angular";
+import { EventsComponent } from './components/events/events/events.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {DayPilotModule} from "@daypilot/daypilot-lite-angular";
     IndexComponent,
     NavigationComponent,
     LoginRegistrationComponent,
-    CalendarComponent
+    CalendarComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,

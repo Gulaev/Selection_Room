@@ -42,12 +42,11 @@ export class LoginComponent {
       username: this.loginForm.value.username,
       password: this.loginForm.value.password
     }).subscribe( data => {
-        // const cookieValue = this.cookeService.get('access_token')
         this.tokenStorage.setToken(data.token)
         this.tokenStorage.saveUser(data)
         this.dialogService.getDialog().closeAll()
-        this.router.navigate([''])
-        // window.location.reload()
+        this.router.navigate(['']).then(window.location.reload)
+
         this.notification.showSnackBar('Welcome')
 
       }, error => {

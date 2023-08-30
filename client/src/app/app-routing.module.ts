@@ -5,11 +5,13 @@ import {
   LoginRegistrationComponent
 } from "./components/auth/login/login-registration/login-registration.component";
 import {CalendarComponent} from "./components/scheduling/scheduling.component";
+import {EventsComponent} from "./components/events/events/events.component";
 
 const routes: Routes = [
   {path:'login', component : LoginRegistrationComponent},
   {path:'', component: IndexComponent},
-  {path: 'scheduling', component: CalendarComponent}
+  {path: 'scheduling', component: CalendarComponent},
+  {path: 'events', component: EventsComponent}
 ];
 
 @NgModule({

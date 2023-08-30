@@ -1,0 +1,27 @@
+<div class="event-details-container">
+  <div class="image-container">
+    <img src="{{ event.imagePath }}" width="600" height="600">
+  </div>
+  <div class="info-container">
+    <table>
+      <tr>
+        <td colspan="2"><h1 class="my-font">{{ event.name }}</h1></td>
+      </tr>
+      <tr>
+        <td colspan="2"><p class="my-font">{{ event.description }}</p></td>
+      </tr>
+      <tr>
+        <td><h2 class="my-font">Start Date:</h2></td>
+        <td><h2 class="my-font">{{ event.startDate | date }}</h2></td>
+      </tr>
+      <tr>
+        <td><h3 class="my-font">Price:</h3></td>
+        <td><h3 class="my-font">{{ event.price | currency }}</h3></td>
+      </tr>
+      <tr>
+        <td colspan="2"><button class="my-font" mat-button>Buy</button></td>
+      </tr>
+    </table>
+  </div>
+</div>
+

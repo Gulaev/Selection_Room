@@ -13,16 +13,19 @@ export class LoginRegistrationComponent implements OnInit{
   constructor(private dialog: MatDialog,
               private dialogService: DialogService) {}
 
-  openRegistrationDialog(): void {
+  openRegistrationDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(LoginComponent, {
-      width: '500px',
-      height: '300px'
+      width: '750px',
+      height: '400px',
+      enterAnimationDuration,
+      exitAnimationDuration,
+      // backdropClass: 'dialog::backdrop'
     });
     this.dialogService.setDialog(this.dialog)
   }
 
 
   ngOnInit(): void {
-    this.openRegistrationDialog()
+    this.openRegistrationDialog('2000ms', '1000ms')
   }
 }

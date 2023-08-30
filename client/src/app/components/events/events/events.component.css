@@ -1,0 +1,41 @@
+.my-font {
+  font-family: 'MyFont';
+}
+
+.event-details-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.image-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.info-container {
+  flex: 1;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 50%;
+}
+
+td {
+  padding: 3px;
+  vertical-align: top;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.my-font {
+  font-family: 'MyFont';
+}

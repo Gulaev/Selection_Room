@@ -1,5 +1,5 @@
 <mat-toolbar color="#e7e9e9">
-  <span routerLink="/main" style="cursor: pointer;margin-left: 20px;">Selection Room</span>
+  <span class="my-font" routerLink="/" style="cursor: pointer;margin-left: 20px;">Selection Room</span>
 
   <button [cdkMenuTriggerFor]="menu" _ngcontent-ng-c1975215705="" mat-icon-button="" aria-label="Example icon-button with menu icon" class="example-icon mdc-icon-button mat-mdc-icon-button mat-unthemed mat-mdc-button-base" mat-ripple-loader-class-name="mat-mdc-button-ripple" mat-ripple-loader-centered="">
     <span class="mat-mdc-button-persistent-ripple mdc-icon-button__ripple"></span>
@@ -9,17 +9,19 @@
 
 
   <ng-template #menu>
-    <div class="example-menu" cdkMenu>
-      <button class="example-menu" *ngIf="isUserLogin" routerLink="/scheduling" cdkMenuItem>Scheduling</button>
+    <div class="example-menu" class="my-font" cdkMenu>
+      <button class="example-menu-item" *ngIf="isUserLogin" routerLink="/scheduling" cdkMenuItem>Scheduling</button>
       <button class="example-menu-item" routerLink="/events" cdkMenuItem >Events</button>
+      <button class="example-menu-item" routerLink="/info">Info</button>
+      <button class="example-menu-item" routerLink="/contacts">Contacts</button>
     </div>
   </ng-template>
 
-  <a class="right-align" (click)="clickLogin()" mat-button>
+  <a class="my-font" class="right-align" (click)="clickLogin()" mat-button>
       {{ isUserLogin ? this.user.username : 'Login' }}
     </a>
 
-    <a class="scheduling-button" *ngIf="isUserLogin" routerLink="/scheduling" mat-button>Scheduling</a>
+<!--    <a class="scheduling-button" *ngIf="isUserLogin" routerLink="/scheduling" mat-button>Scheduling</a>-->
 
 
 

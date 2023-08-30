@@ -12,19 +12,19 @@ import {SchedulingService as DataService} from "../../service/scheduling.service
   selector: 'calendar-component',
   template: `
     <div class="container">
-      <div class="navigator">
+      <div class="navigator" >
         <daypilot-navigator [config]="configNavigator" [events]="events" [(date)]="date" (dateChange)="changeDate($event)" #navigator></daypilot-navigator>
       </div>
       <div class="content">
         <div class="buttons">
-          <button (click)="viewDay()" [class]="this.configNavigator.selectMode == 'Day' ? 'selected' : ''">Day</button>
-          <button (click)="viewWeek()" [class]="this.configNavigator.selectMode == 'Week' ? 'selected' : ''">Week</button>
-          <button (click)="viewMonth()" [class]="this.configNavigator.selectMode == 'Month' ? 'selected' : ''">Month</button>
+          <button class="my-font" (click)="viewDay()" [class]="this.configNavigator.selectMode == 'Day' ? 'selected' : ''">Day</button>
+          <button class="my-font" (click)="viewWeek()" [class]="this.configNavigator.selectMode == 'Week' ? 'selected' : ''">Week</button>
+          <button class="my-font" (click)="viewMonth()" [class]="this.configNavigator.selectMode == 'Month' ? 'selected' : ''">Month</button>
         </div>
 
-        <daypilot-calendar [config]="configDay" [events]="events" #day></daypilot-calendar>
-        <daypilot-calendar [config]="configWeek" [events]="events" #week></daypilot-calendar>
-        <daypilot-month [config]="configMonth" [events]="events" #month></daypilot-month>
+        <daypilot-calendar  class="my-font" [config]="configDay" [events]="events" #day></daypilot-calendar>
+        <daypilot-calendar  class="my-font" [config]="configWeek" [events]="events" #week></daypilot-calendar>
+        <daypilot-month  class="my-font" [config]="configMonth" [events]="events" #month></daypilot-month>
       </div>
     </div>
   `,
@@ -64,9 +64,10 @@ import {SchedulingService as DataService} from "../../service/scheduling.service
       cursor: pointer;
       margin-right: 1px;
       transition: all 0.2s;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
       box-sizing: border-box;
     }
+    
 
     button:last-child {
       margin-right: 0;
@@ -74,7 +75,7 @@ import {SchedulingService as DataService} from "../../service/scheduling.service
 
     button.selected {
       background-color: #1c4587;
-      box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
     }
 
     button:first-child {
@@ -89,11 +90,11 @@ import {SchedulingService as DataService} from "../../service/scheduling.service
 
     button:hover {
       background-color: #2f66c4;
-      box-shadow: 0 5px 7px rgba(0,0,0,0.1);
+      box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
     }
 
     button:active {
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
   `]
@@ -146,6 +147,7 @@ export class CalendarComponent implements AfterViewInit {
           if (!modal.result) { return; }
           event.data.text = modal.result;
           dp.events.update(event);
+          this.ds.addEventOrUpdate(event)
         }
       },
       {
@@ -316,8 +318,8 @@ export class CalendarComponent implements AfterViewInit {
       action: "None",
       image: `https://picsum.photos/36/36?random=${args.data.id}`,
       style: "border-radius: 50%; border: 2px solid #fff; overflow: hidden;",
-
     });
+    // this.ds.addEventOrUpdate(args.data)
   }
 
   //This method must creat

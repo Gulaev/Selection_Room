@@ -10,8 +10,9 @@ export class NotificationService {
 
   public showSnackBar(message: string) {
     this.snackBar.open(message, 'close', {
-          duration: 1000,
-          panelClass: ['black-snackbar']
+          duration: 2000,
+          panelClass: ['white-snackbar']
+
         }
     )
   }
