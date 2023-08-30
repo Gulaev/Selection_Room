@@ -1,0 +1,44 @@
+<mat-toolbar color="#e7e9e9">
+  <span routerLink="/main" style="cursor: pointer;margin-left: 20px;">Selection Room</span>
+
+  <button [cdkMenuTriggerFor]="menu" _ngcontent-ng-c1975215705="" mat-icon-button="" aria-label="Example icon-button with menu icon" class="example-icon mdc-icon-button mat-mdc-icon-button mat-unthemed mat-mdc-button-base" mat-ripple-loader-class-name="mat-mdc-button-ripple" mat-ripple-loader-centered="">
+    <span class="mat-mdc-button-persistent-ripple mdc-icon-button__ripple"></span>
+    <mat-icon _ngcontent-ng-c1975215705="" role="img" class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">menu</mat-icon>
+    <span class="mat-mdc-focus-indicator"></span><span class="mat-mdc-button-touch-target"></span>
+    <span class="mat-ripple mat-mdc-button-ripple"></span></button>
+
+
+  <ng-template #menu>
+    <div class="example-menu" cdkMenu>
+      <button class="example-menu" *ngIf="isUserLogin" routerLink="/scheduling" cdkMenuItem>Scheduling</button>
+      <button class="example-menu-item" routerLink="/events" cdkMenuItem >Events</button>
+    </div>
+  </ng-template>
+
+  <a class="right-align" (click)="clickLogin()" mat-button>
+      {{ isUserLogin ? this.user.username : 'Login' }}
+    </a>
+
+    <a class="scheduling-button" *ngIf="isUserLogin" routerLink="/scheduling" mat-button>Scheduling</a>
+
+
+
+  <!--  <button *ngIf="!isLoginIn" matTooltip="Login" routerLink="/login" mat-icon-button class="example-icon favorite-icon">-->
+<!--    <mat-icon>login</mat-icon>-->
+<!--  </button>-->
+
+
+<!--  <div class="user-name">-->
+<!--    <h3 *ngIf="isDataLoaded">{{this.user.firstName}} {{this.user.lastName}}</h3>-->
+<!--  </div>-->
+
+<!--  <button *ngIf="isLoginIn" [matMenuTriggerFor]="menu" matTooltip="Profile" mat-icon-button>-->
+<!--    <mat-icon color="accent">account_box</mat-icon>-->
+<!--  </button>-->
+<!--  <mat-menu id="menu-item" #menu="matMenu">-->
+<!--    <button mat-menu-item routerLink="/profile">Profile</button>-->
+<!--    <button (click)="logout()" mat-menu-item>-->
+<!--      Logout-->
+<!--    </button>-->
+<!--  </mat-menu>-->
+</mat-toolbar>
