@@ -25,6 +25,9 @@ import {CalendarComponent} from "./components/scheduling/scheduling.component";
 import {SmartWebComponentModule} from "./modules/smart-web-component.module";
 import {DayPilotModule} from "@daypilot/daypilot-lite-angular";
 import { EventsComponent } from './components/events/events/events.component';
+import { InfoComponent } from './components/info/info.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
+import { PaymentComponent } from './components/events/payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { EventsComponent } from './components/events/events/events.component';
     NavigationComponent,
     LoginRegistrationComponent,
     CalendarComponent,
-    EventsComponent
+    EventsComponent,
+    InfoComponent,
+    ContactsComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,

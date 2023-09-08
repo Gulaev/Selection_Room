@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {TokenStorageService} from "../../../service/jwt/token-storage.service";
 import {User} from "../../../models/User";
 import {UserService} from "../../../service/user.service";
+import {CdkScrollable, ScrollDispatcher} from "@angular/cdk/overlay";
 
 @Component({
   selector: 'app-navigation',
@@ -25,7 +26,6 @@ export class NavigationComponent {
         this.user = u
         this.isUserLogin = true;
       });
-
     }
   }
 

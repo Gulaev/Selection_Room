@@ -16,12 +16,13 @@
 
 .info-container {
   flex: 1;
+  margin-bottom: 200px;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 50%;
+  margin-top: 20%;
 }
 
 td {

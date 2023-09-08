@@ -34,6 +34,6 @@ build/
 .vscode/
 
 
-/client/node_modul
+client/node_modul
 
-/client/.angular/cache
+client/.angular/cache
